@@ -1,0 +1,60 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400;500;800&display=swap");
+body {
+  font-family: 'Newsreader', serif; }
+  body .bg-header {
+    padding: 1rem 0;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: blue;
+    color: #fff;
+    align-items: center; }
+    body .bg-header div nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly; }
+      body .bg-header div nav a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 500;
+        word-spacing: 1px;
+        letter-spacing: 1px;
+        font-size: 20px;
+        opacity: 0.7;
+        transition: all .2s linear; }
+        body .bg-header div nav a:hover {
+          opacity: 1; }
+    body .bg-header div .social-icons {
+      display: flex;
+      justify-content: space-between; }
+
+.main-home {
+  width: 100%;
+  height: 750px;
+  background-image: url("../assets/bg-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; }
+  .main-home div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    color: #fff; }
+    .main-home div h1 {
+      font-size: 95px;
+      width: 50%;
+      letter-spacing: 2px;
+      word-spacing: 2px;
+      text-align: center; }
+
+.active {
+  background-color: #e5e5e5;
+  color: #000 !important; }
+
+/*# sourceMappingURL=index.css.map */
