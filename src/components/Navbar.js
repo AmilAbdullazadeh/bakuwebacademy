@@ -1,22 +1,83 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {NavLink} from "react-router-dom";
 import {SocialIcon} from "react-social-icons";
+import logo from "../assets/logo.svg"
 
 export default function Navbar() {
+
     return (
         <header className="bg-header">
-            <div className="container mx-auto d-flex">
-                <nav className="col-md-6" >
-                    <NavLink activeClassName="active" to="/" exact>Baku Web Academy</NavLink>
-                    <NavLink activeClassName="active" to="/post">Blog Posts</NavLink>
-                    <NavLink activeClassName="active" to="/project">Projects</NavLink>
-                    <NavLink activeClassName="active" to="/about">About us</NavLink>
-                </nav>
-                <div className="col-md-1 social-icons">
-                    <SocialIcon fgColor="#fff" url="https://instagram.com/b_w_academy" target="_blank" style={{ height: 35, width: 35 }} />
-                    <SocialIcon url="https://facebook.com/b_w_academy" target="_blank" style={{ height: 35, width: 35 }} />
-                </div>
-            </div>
+            <nav className="navbar navbar-expand-lg navbar-light">
+                    <NavLink
+                        to="/"
+                        exact
+                        rel="noreferrer"
+                        className="navbar-brand"
+                    >
+                        <span className="logo-img" style={{
+                            backgroundImage: `url(${logo})`
+                        }} >
+                        </span>
+                    </NavLink>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
+                            <li className="nav-item">
+                                <NavLink
+                                    aria-current="page"
+                                    className="nav-link"
+                                    activeClassName="active"
+                                    rel="noreferrer"
+                                    to="/post"
+                                    exact
+                                >
+                                    Blog
+                                </NavLink>
+
+                            </li>
+                            <li className="nav-item">
+                                <NavLink
+                                    aria-current="page"
+                                    className="nav-link"
+                                    rel="noreferrer"
+                                    activeClassName="active"
+                                    to="/project"
+                                    exact
+                                >
+                                    Projects
+                                </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink
+                                    aria-current="page"
+                                    className="nav-link"
+                                    rel="noreferrer"
+                                    activeClassName="active"
+                                    to="/about"
+                                    exact
+                                >
+                                    About us
+                                </NavLink>
+                            </li>
+                            <li className="nav-item" >
+                                <NavLink
+                                    aria-current="page"
+                                    className="nav-link contact-btn"
+                                    rel="noreferrer"
+                                    activeClassName="active"
+                                    to="/contact"
+                                    exact
+                                >
+                                    Contact
+                                </NavLink>
+                            </li>
+                        </ul>
+                    </div>
+            </nav>
         </header>
     )
 }

@@ -5,19 +5,25 @@ import SinglePost from "./components/SinglePost";
 import Post from "./components/Post";
 import Project from "./components/Project";
 import Navbar from "./components/Navbar";
+// import Contact from "./components/Contact";
 
 function App() {
     return (
-        <BrowserRouter>
-            <Navbar />
-            <Switch>
-                <Route component={Home} path="/" exact/>
-                <Route component={About} path="/about"/>
-                <Route component={SinglePost} path="/post/:slug"/>
-                <Route component={Post} path="/post"/>
-                <Route component={Project} path="/project"/>
-            </Switch>
-        </BrowserRouter>
+        <div className="page" >
+            <div className="container-fluid">
+                <BrowserRouter>
+                    <Navbar />
+                    <Switch>
+                        <Route component={Home} path="/" exact/>
+                        <Route component={About} path="/about"/>
+                        <Route component={SinglePost} path="/post/:slug"/>
+                        <Route component={Post} path="/post"/>
+                        <Route component={Project} path="/project"/>
+                        {/*<Route component={Contact} path="/contact"/>*/}
+                    </Switch>
+                </BrowserRouter>
+            </div>
+        </div>
     )
 
 }
